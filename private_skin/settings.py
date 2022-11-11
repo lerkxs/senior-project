@@ -66,7 +66,7 @@ TEMPLATES = [
         },
     },
 ]
- 
+
 WSGI_APPLICATION = 'private_skin.wsgi.application'
 
 
