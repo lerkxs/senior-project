@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'information.apps.InformationConfig',
     'top.apps.TopConfig',
+
+    'social_django', 
+    'apps',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +55,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware', 
 ]
 
 ROOT_URLCONF = 'private_skin.urls'
@@ -67,6 +71,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social_django.context_processors.backends',
             ],
         },
     },
@@ -174,3 +179,14 @@ LOGGING = {
         }
     }
 }
+
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.google.GoogleOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+]
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_URL = 'logout'
+LOGOUT_REDIRECT_URL = 'login'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '668958984155-vu9bcj0uuds5ka4pi8p0l2vj1fu3phmd.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
