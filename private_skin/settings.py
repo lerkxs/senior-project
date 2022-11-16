@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'top.apps.TopConfig',
 
     'social_django', 
-    'apps',
+    'signup',
 ]
 
 MIDDLEWARE = [
