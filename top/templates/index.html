@@ -1,12 +1,94 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block titile %}Information{% endblock %}
+
+{% block contents%}
+<section>
+    <div class="slider">
+        <div class="slider-wrapper flex">
+            <div class="slide flex">
+                <div class="slide-image slider-link prev"><img src="static/top/images/1.png">
+                    <div class="overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-date">10.10.2022.</div>
+                    <div class="slide-title">表皮水疱症</div>
+                    <div class="slide-text">ネットから参加できる研究 RUDY JAPAN<br>
+                        RUDY JAPAN(ルーディージャパン)は、ネットから参加できる医学研究です。<br>
+                        登録後、定期的にアンケートに回答していただきます。
+                        患者さんと研究者が一緒に研究を進めながら、難病・希少疾患をかかえる患者さんの症状や日常生活に関する情報を収集し、病気の理解を進めることを目的としています。
+                    </div>
+                    <a class="slide-more" href="https://debra-japan.com/2020/06/13/433/">READ MORE<a>
+                </div>
+            </div>
+            <div class="slide flex">
+                <div class="slide-image slider-link next"><img src="static/top/images/3.png">
+                    <div class="overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-date">04.08.2022.</div>
+                    <div class="slide-title">ASDR 2022 Annual Scientific Meeting</div>
+                    <div class="slide-text">The meeting program will cover the most innovative aspects of dermatology
+                        including:<br>
+                        ・Rare Skin Cancer/Diseases<br>・Keratinocyte Cancer - Genetics/Genomics/Therapeutics<br>
+                        ・Molecular Pathology and Epithelial Cell Biology<br>
+                        ・Inflammatory Skin Diseases and Autoimmunity,<br>
+                    </div>
+                    <a href="https://www.asdr.org.au/asdr-2022" class="slide-more">READ MORE<a>
+                </div>
+            </div>
+            <div class="slide flex">
+                <div class="slide-image slider-link next"><img src="static/top/images/4.png">
+                    <div class="overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-date">02.06.2022.</div>
+                    <div class="slide-title">第121回日本皮膚科学会総会</div>
+                    <div class="slide-text">The 121st Annual Meeting of the Japanese Dermatological Association.<br>
+                        SDGs - Sustainable Dermatology Goals-（持続可能な皮膚科学の目標）</div>
+                    <a class="slide-more" href="https://jda121.jp/">READ MORE</a>
+                </div>
+            </div>
+            <div class="slide flex">
+                <div class="slide-image slider-link next"><a href="http://allergy.gr.jp/archives/2452"><img
+                            src="static/top/images/5.png"></a>
+                    <div class="overlay"></div>
+                </div>
+                <div class="slide-content">
+                    <div class="slide-date">27/28.08.2022.</div>
+                    <div class="slide-title">アトピーでも人生を楽しむためには？</div>
+                    <div class="slide-text">全国どこからでもご自宅のパソコンやスマホで参加できます。Zoomって初めて使うけど大丈夫?という方も歓迎です。<br>
+                        ・症状のこと、使っている薬のこと、通っている病院のこと<br>
+                        ・家族や友人とのつき合い<br>
+                        ・かゆくなったときどうやって対処しているの？<br>
+                        ・なんで自分だけこんな皮膚なのって思ったことある?<br>
+                        ・震災や台風などの災害にどう備える？</div>
+                    <a class="slide-more" href="http://allergy.gr.jp/archives/2452">READ MORE</a>
+                </div>
+            </div>
+        </div>
+        <div class="arrows">
+            <a href="#" title="Previous" class="arrow slider-link prev"></a>
+            <a href="#" title="Next" class="arrow slider-link next"></a>
+        </div>
+
+    </div>
+</section>
+<section>    
+    <div class="textcontainer">
+        <span class="particletext confetti">About Us</span>
+    </div>
+    <!-- <div class="picture_1">
+        <img class="p_1" src="images/UnicornVectorGradient_6.jpg">
+    </div> -->
+    <!-- <div class="picture_1">
+        <img class="p_2" src="images/c861a4f077592b609225da73b3f62f28.jpg">
+    </div> -->
+
+
+    <!-- <div class="textcontainer">
+        <span class="particletext bubbles">皮膚難病支援システムとは</span>
+    </div> -->
+</section>    
+{% endblock %}
