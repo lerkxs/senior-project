@@ -1,0 +1,137 @@
+.link_t {
+    float: right;
+    margin: 30px 300px 0 0;
+}
+
+.link_t a{
+    color: #3E79B8;
+}
+
+ul {
+    list-style: none;
+    /* padding: 0; */
+    padding: 5px 12px;
+}
+
+.contents {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.images {
+    text-align: center;
+}
+
+.images img {
+    height: 150px;
+}
+
+.disease1_1 {
+    margin: 20px 300px 30px 400px;
+    
+}
+
+.disease1_1 a {
+    padding: 10px 0 5px 200px;
+}
+
+.disease1 {
+    position: relative;
+    padding: 10px 10px 10px 100px;
+    /* color: white;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center; */
+}
+
+.disease1::before,
+.disease1::after {
+    position: absolute;
+    text-align: center;
+    z-index: -1;
+}
+
+.disease1::before {
+    top: 0;
+    left: 50px;
+    width: 600px;
+    height: 120%;
+    background-color: #002d6c;
+    transform: skew(-20deg);
+    content: '';
+}
+
+
+.disease1::after {
+    top: -15px;
+    left: 50px;
+    width: 50px;
+    height: 80px;
+    transform: skew(-20deg);
+    background-color: #1cd8db;
+    box-shadow: 2px 0 5px rgb(82, 82, 82);
+    -ms-writing-mode: tb-rl;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    font-size: 8px;
+    line-height: 50px;
+    content: 'information';
+}
+
+.disease1 {
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.disease1_1::first-letter {
+    background-image: linear-gradient(45deg, #fff 50%, #1cd8db 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.contents{
+    position: relative;
+    background: #eff6ff;
+    width: 1200px;
+    padding: 10px;
+    overflow: hidden;
+    clear: both;
+}
+
+.box_list {
+    /* position: absolute; */
+    background: #cee3f9;
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    clear: both;
+
+}
+
+.box_list li a {
+    display: block;
+    /* font-weight: bold; */
+    background: no-repeat 15px 15px #fff;
+    padding: 10px;
+    margin: 5px 0px;
+    color: #3E79B8;
+}
+
+.box_list li a:hover{
+    background-color: #ecf5ff;
+}
+.box_list li a:visited {
+    text-decoration: underline;
+    color: #3E79B8;
+}
+
+.t {
+    color: #3E79B8;
+}
+
+.ptop{
+    text-align: right;
+    margin: 30px;
+}

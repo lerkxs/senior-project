@@ -103,11 +103,28 @@ I like to keep the specificity low by using tags to make it easy to override the
 .navbar {
   background: #D2D7D3;
   *zoom: 1;
-  margin: 0 60px 0 ;
+  /* margin: 0 60px 0 ; */
+  /* margin: 0; */
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  z-index: 10000;
 }
+
+/* header.st-NewHeader{
+  background: #D2D7D3;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  z-index: 10000;
+} */
 
 .navbar .menu-item :hover {
   background: #566b5a;
+  height: 50px;
 }
 
 .navbar:before,
@@ -137,6 +154,7 @@ I like to keep the specificity low by using tags to make it easy to override the
 .menu a {
   color: #6C7A89;
   font-size: 0.80rem;
+  font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
   padding: 0 0.75rem;
@@ -170,14 +188,14 @@ I like to keep the specificity low by using tags to make it easy to override the
 
 .menu .sub-menu {
   background: #fff;
-  width: 270px;
+  width: 295px;
   padding: 0.35rem 1.25rem 0.25rem;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
 }
 
 .menu .sub-menu:hover {
   background: #fff;
-  width: 270px;
+  width: 295px;
   padding: 0.35rem 1.25rem 0.25rem;
 }
 
@@ -215,7 +233,7 @@ I like to keep the specificity low by using tags to make it easy to override the
 /* DEMO PAGE STYLE */
 html {
   padding: 40px;
-  background: #e2e9ea;
+  background: #e8eeef;
 }
 
 h1 {
@@ -244,5 +262,5 @@ h1+p {
   border-top: 1px dotted rgb(255, 255, 255);
   width: 360px;
   padding: 12px;
-  margin: 12px auto 48px;
+  margin: 12px auto 5px;
 }

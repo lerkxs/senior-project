@@ -8,6 +8,8 @@
     <link href="{% static 'top/css/style.css' %}" rel="stylesheet" />
     <link href="{% static 'top/css/Particle.css' %}" rel="stylesheet" />
     <link href="{% static 'top/css/footer_1.css' %}" rel="stylesheet" />
+    <link  href="{% static 'information/css/SkinDiseaseInformation.css' %}"rel="stylesheet"/>
+    <link  href="{% static 'information/css/AtopicSkin.css' %}"rel="stylesheet"/>
     {% block head %}{% endblock %}
 </head>
 
@@ -15,20 +17,24 @@
 
     <h1>Intractable Skin Disease Support System</h1>
     <p>Intractable Skin Disease Support System.Creating a comfortable environment to live in.</p>
+{% comment %}     
+    <header class="st-NewHeader">
+        <p>support system</p>
+    </header>     {% endcomment %}
 
     <nav class="navbar" role='navigation'>
 
         <ul class="menu no-js">
-            <li class="menu-item"><a href="{% url 'top:index' %}">皮膚病情報 Information</a></li>
+            <li class="menu-item"><a href="{% url 'information:SkinDiseaseInformation' %}">皮膚病情報 Information</a></li>
             <li class="menu-item"><a href="{% url 'top:index' %}">ブログ Blog</a></li>
             <li class="menu-item"><a href="{% url 'top:index' %}">ライブ配信 live</a></li>
             <li class="menu-item"><a href="{% url 'top:index' %}">アカウント account</a>
                 <ul class="sub-menu">
-                    <li class="menu-item_1"><a href="#">ログイン</a></li>
-                    <li class="menu-item_1"><a href="#">サインアップ</a></li>
+                    <li class="menu-item_1"><a href="{% url 'signup:login' %}">ログイン</a></li>
+                    <li class="menu-item_1"><a href="{% url 'signup:login' %}">サインアップ</a></li>
                 </ul>
             </li>
-            <li class="menu-item"><a href="#">医者さんへ To the doctor</a></li>
+            <li class="menu-item"><a href="#">お医者さんへ To the doctor</a></li>
         </ul>
     </nav>
 
