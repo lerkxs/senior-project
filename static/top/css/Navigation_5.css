@@ -1,0 +1,266 @@
+@charset "UTF-8";
+
+/* setup */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all 60ms ease;
+}
+
+/* variables */
+.menu ul a,
+.menu ul li {
+  display: block;
+  position: relative;
+}
+
+.menu a {
+  position: relative;
+}
+
+.sub-menu li {
+  position: absolute;
+  z-index: 1;
+}
+
+.menu a,
+.menu li {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+/* 
+Essential Styles 
+- - - - - - - - - - - -
+I like to keep the specificity low by using tags to make it easy to override the basic strucuture, if needed.  Adding an id to the root element would offer more isolation.
+
+*/
+.menu {
+  /* postion: relative; */
+  list-style: none;
+  float: left;
+  padding: 0;
+  margin: 0;
+  *zoom: 1;
+  align-items: center;
+}
+
+.menu li {
+  float: left;
+}
+
+.menu a {
+  height: 3rem;
+  line-height: 3rem;
+  width: 100%;
+}
+
+.menu ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 180px;
+  min-width: 180px;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul ul {
+  top: -0.35rem;
+  left: 100%;
+}
+
+
+.menu ul li {
+  float: left;
+  width: 100%;
+  min-width: 160px;
+}
+
+.menu ul a {
+  height: 2rem;
+  line-height: 2rem;
+}
+
+.menu li:hover>.sub-menu {
+  display: block;
+}
+
+.menu:before,
+.menu:after {
+  content: " ";
+  display: table;
+}
+
+.menu:after {
+  clear: both;
+}
+
+/* THEME  */
+.navbar {
+  background: #D2D7D3;
+  *zoom: 1;
+  /* margin: 0 60px 0 ; */
+  /* margin: 0; */
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  z-index: 10000;
+}
+
+/* header.st-NewHeader{
+  background: #D2D7D3;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  z-index: 10000;
+} */
+
+.navbar .menu-item :hover {
+  background: #566b5a;
+  height: 50px;
+}
+
+.navbar:before,
+.navbar:after {
+  content: " ";
+  display: table;
+}
+
+.navbar:after {
+  clear: both;
+}
+
+.menu {
+  width: 100%;
+  /* Change this in order to change the Dropdown symbol */
+}
+
+.menu li {
+  border-right: 1px dotted #ECECEC;
+  width: 20%;
+}
+
+.menu li:last-child {
+  border-right: none;
+}
+
+.menu a {
+  color: #6C7A89;
+  font-size: 0.80rem;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0 0.75rem;
+  font-weight: normal;
+}
+
+/* ナビゲーションの文字 */
+.menu a:hover,
+.menu a.active {
+  color: #D2D7D3;
+  /* border-bottom: 1px solid; */
+}
+
+.menu li>a:after,
+.menu .sub-menu li>a:after {
+  line-height: 1em;
+  font-size: 6px;
+  padding-left: 6px;
+  position: relative;
+  top: -2px;
+}
+
+.menu li>a:after {
+  content: " ▼";
+}
+
+.menu li>a:only-child:after,
+.menu .sub-menu li>a:only-child:after {
+  content: "";
+}
+
+.menu .sub-menu {
+  background: #fff;
+  width: 295px;
+  padding: 0.35rem 1.25rem 0.25rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.menu .sub-menu:hover {
+  background: #fff;
+  width: 295px;
+  padding: 0.35rem 1.25rem 0.25rem;
+}
+
+.menu .sub-menu li {
+  border-right: none;
+  margin: 0 auto;
+}
+
+.menu .sub-menu a {
+  color: #0a4335;
+  /* padding: 0.35rem ($menuHeight / 2); */
+}
+
+.menu .sub-menu a:hover {
+  background: rgb(235, 235, 235);
+  border-bottom: none;
+  /* position: absolute; */
+}
+
+.menu .sub-menu .sub-menu:before {
+  content: " ";
+  border-right: 14px solid #2C3E50;
+  border-bottom: 14px solid transparent;
+  position: absolute;
+  top: 0;
+  left: -14px;
+}
+
+.menu .active,
+.menu .current_page_item a,
+.menu .current-menu-item a {
+  color: #6C7A89;
+}
+
+/* DEMO PAGE STYLE */
+html {
+  padding: 40px;
+  background: #e8eeef;
+}
+
+h1 {
+  padding: 70px 0 0 0;
+  font-size: 2em;
+  text-align: center;
+  line-height: 0.95em;
+  font-weight: bold;
+  color: #FFF;
+  text-shadow:
+    0 0 0.05em #a9ceec,
+    0 0 0.10em #a9ceec,
+    0 0 0.15em #a9ceec,
+    0 0 0.30em #a9ceec;
+  filter: saturate(80%);
+  -webkit-background-clip: text;
+  -webkit-box-reflect: below -0.25em -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, .6)), to(transparent));
+}
+
+h1+p {
+  font-size: 14px;
+  font-family: serif;
+  font-style: italic;
+  color: #ffffff;
+  text-align: center;
+  border-top: 1px dotted rgb(255, 255, 255);
+  width: 360px;
+  padding: 12px;
+  margin: 12px auto 5px;
+}

@@ -1,0 +1,93 @@
+{% load static %}
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% block titile %}{% endblock %}</title>
+    <link href="{% static 'top/css/Navigation_5.css' %}" rel="stylesheet" />
+    <link href="{% static 'top/css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'top/css/Particle.css' %}" rel="stylesheet" />
+    <link href="{% static 'top/css/footer_1.css' %}" rel="stylesheet" />
+    <link  href="{% static 'information/css/SkinDiseaseInformation.css' %}"rel="stylesheet"/>
+    <link  href="{% static 'information/css/AtopicSkin.css' %}"rel="stylesheet"/>
+    {% block head %}{% endblock %}
+</head>
+
+<body>
+
+    <h1>Intractable Skin Disease Support System</h1>
+    <p>Intractable Skin Disease Support System.Creating a comfortable environment to live in.</p>
+{% comment %}     
+    <header class="st-NewHeader">
+        <p>support system</p>
+    </header>     {% endcomment %}
+
+    <nav class="navbar" role='navigation'>
+
+        <ul class="menu no-js">
+            <li class="menu-item"><a href="{% url 'information:SkinDiseaseInformation' %}">皮膚病情報 Information</a></li>
+            <li class="menu-item"><a href="{% url 'top:index' %}">ブログ Blog</a></li>
+            <li class="menu-item"><a href="{% url 'top:index' %}">ライブ配信 live</a></li>
+            <li class="menu-item"><a href="{% url 'top:index' %}">アカウント account</a>
+                <ul class="sub-menu">
+                    <li class="menu-item_1"><a href="{% url 'signup:login' %}">ログイン</a></li>
+                    <li class="menu-item_1"><a href="{% url 'signup:login' %}">サインアップ</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">お医者さんへ To the doctor</a></li>
+        </ul>
+    </nav>
+
+
+    {% block contents %}{% endblock %}
+
+    <footer class="flex-rw">
+
+        <ul class="footer-list-top">
+            <li>
+                <h5 class="footer-list-header">ガイドライン</h5>
+            </li>
+            <li><a href="#" class="generic-anchor footer-list-anchor"
+                    itemprop="significantLink">利用規則</a>
+            </li>
+            <li><a href="#" class="generic-anchor footer-list-anchor"
+                    itemprop="significantLink">プライバシーポリシー</a>
+            </li>
+
+            <li><a href="#" itemprop="significantLink"
+                    class="generic-anchor footer-list-anchor">サイトについて</a></li>
+        </ul>
+        <ul class="footer-list-top">
+            <li>
+                <h5 class="footer-list-header">患者さん・一般の皆さま</h5>
+            </li>
+            <li><a href="#" class="generic-anchor footer-list-anchor">お問い合わせ</a></li>
+        </ul>
+        <ul class="footer-list-top">
+            <li id='help'>
+                <h5 class="footer-list-header">医療関係者の皆さま</h5>
+            </li>
+            <li><a href="#" class="generic-anchor footer-list-anchor"
+                    itemprop="significantLink">お問い合わせ</a></li>
+        </ul>
+        <section class="footer-bottom-section flex-rw">
+            <div class="footer-bottom-wrapper">
+                <i class="fa fa-copyright" role="copyright">
+                </i> 2022 Intractable Skin Disease Support System
+            </div>
+            <div class="footer-bottom-wrapper">
+                <a href="#" class="generic-anchor" rel="nofollow">Terms</a> |
+                <a href="#" class="generic-anchor" rel="nofollow">Privacy</a>
+            </div>
+        </section>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="{% static 'top/js/script.js' %}"></script>
+    <script src="{% static 'top/js/Particle.js' %}"></script>
+    <script src="{% static 'top/js/footer_1.js' %}"></script>
+
+</body>
+
+</html>
