@@ -8,6 +8,24 @@
     <link href="{% static 'top/css/style.css' %}" rel="stylesheet" />
     <link href="{% static 'top/css/Particle.css' %}" rel="stylesheet" />
     <link href="{% static 'top/css/footer_1.css' %}" rel="stylesheet" />
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+ 
+    <link rel="stylesheet" href="{% static 'signup/css/owl.carousel.min.css' %}">
+ 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'signup/css/bootstrap.min.css' %}">
+ 
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'signup/css/style.css' %}">
+    <!-- google login css-->
+    <link rel="stylesheet" href="{% static 'signup/css/google.css' %}" />
+    <title>Login #6</title>
     {% block head %}{% endblock %}
 </head>
 
@@ -24,11 +42,11 @@
             <li class="menu-item"><a href="{% url 'top:index' %}">ライブ配信 live</a></li>
             <li class="menu-item"><a href="{% url 'top:index' %}">アカウント account</a>
                 <ul class="sub-menu">
-                    <li class="menu-item_1"><a href="#">ログイン</a></li>
-                    <li class="menu-item_1"><a href="#">サインアップ</a></li>
+                    <li class="menu-item_1"><a href="{% url 'signup:login' %}">ログイン</a></li>
+                    <li class="menu-item_1"><a href="{% url 'signup:login' %}">サインアップ</a></li>
                 </ul>
             </li>
-            <li class="menu-item"><a href="#">医者さんへ To the doctor</a></li>
+            <li class="menu-item"><a href="#">お医者さんへ To the doctor</a></li>
         </ul>
     </nav>
 
@@ -81,7 +99,10 @@
     <script src="{% static 'top/js/script.js' %}"></script>
     <script src="{% static 'top/js/Particle.js' %}"></script>
     <script src="{% static 'top/js/footer_1.js' %}"></script>
-
+    <script src="{% static 'signup/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'signup/js/popper.min.js' %}"></script>
+    <script src="{% static 'signup/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'signup/js/main.js' %}"></script>
 </body>
 
 </html>

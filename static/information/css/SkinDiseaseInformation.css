@@ -1,0 +1,129 @@
+.example {
+    height: 0;
+    margin: 0 auto;
+}
+
+#contents_inner_type2 {
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+    margin-bottom: 22px;
+    background-color:  #fff;
+}
+
+/* pは説明文の文字の設定 */
+p {
+    font-size: 65%;
+    text-align: left;
+    padding: 0.5em 1em 0 1em;
+    margin: 0 1.5px 0 1.5px;
+}
+
+.list_box_inner img {
+    height: 30%;
+}
+
+.list_box_link {
+    text-align: right;
+    margin: 0px 20px 10px;
+    text-size-adjust: 50%;
+}
+
+.list_box_inner .list_box_link .text_btn {
+    color: white;
+    text-decoration: none;
+    font-size: 10px;
+    padding: 0.5em;
+    background: #1B5F8E;
+    border-radius: 10px 0 10px 0;
+    /* display: flex; 
+    margin: 0 auto; */
+}
+
+.patientsandgeneral_top_list .list_box .list_box_inner .list_box_link {
+    margin: 0;
+    padding: 10px 5px;
+}
+
+.entry h2 {
+    font-size: 170%;
+    font-weight: normal;
+    color: #003b8f;
+    padding: 0.65em 0.2em 0.7em 1.4em;
+    background: #dbe3ec url(https://www.maruho.co.jp/common/img/titleMark_h2.gif) 0.5em 0.6em no-repeat;
+    border: solid #c9d3e3 1px;
+    line-height: 120%;
+}
+
+.patientsandgeneral_top_list {
+    height: 3690px;
+    width: 100%;
+    background-color: #fff;
+}
+
+.patientsandgeneral_top_list .list_box_inner h3 {
+    background: none;
+    padding: 0 0 0 0.8em;
+    margin: 0;
+    margin-top: 1.5em;
+    font-weight: 600;
+    font-size: 100%;
+    text-align: left;
+}
+
+.patientsandgeneral_top_list .list_box_inner a {
+    color: #1B5F8E;
+}
+
+.patientsandgeneral_top_list {
+    margin-top: 1em;
+}
+
+.cf {
+    zoom: 1;
+}
+
+.patientsandgeneral_top_list .list_box {
+    width: 23%;
+    height: 290px;
+    float: left;
+    background-color: #efe8df;
+    border: solid #ebd9cb 1px;
+    /* -webkit-border-redius: 4px; */
+    border-radius: 20px;
+    margin: 0.5em;
+}
+
+.patientsandgeneral_top_list .list_box_inner .list_box_img {
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.patientsandgeneral_top_list .list_box_inner .list_box_img img {
+    vertical-align: bottom;
+}
+
+img {
+    width: auto;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    border: 0;
+}
+
+/* list_box_innerはお父さん→position: relative; */
+.list_box_inner {
+    position: relative;
+}
+
+/* list_box_linkは親子→position: absolute; */
+.list_box_link {
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}

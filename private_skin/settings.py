@@ -133,6 +133,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media_local"
 
 STATICFILES_DIRS = (
     [
@@ -191,9 +193,11 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-LOGIN_URL = 'login'
-LOGIN_REDIRECT_URL = 'home'
-LOGOUT_URL = 'logout'
-LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'signup:login'
+LOGIN_REDIRECT_URL = 'signup:home'
+LOGOUT_URL = 'signup:logout'
+LOGOUT_REDIRECT_URL = 'signup:login'
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '668958984155-vu9bcj0uuds5ka4pi8p0l2vj1fu3phmd.apps.googleusercontent.com'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'
+
+SOCIAL_AUTH_URL_NAMESPACE = 'signup:social'
