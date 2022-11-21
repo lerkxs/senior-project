@@ -4,8 +4,8 @@
 
 from django.views import generic
 
-class IndexView(generic.TemplateView):
-    template_name = "Skin disease information.html"
+class SkinView(generic.TemplateView):
+    template_name = "SkinDiseaseInformation.html"
 
-class IndexView(generic.TemplateView):
-    template_name = "AtopicSkin.html"
+# class IndexView(generic.TemplateView):
+#     template_name = "AtopicSkin.html"
