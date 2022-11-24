@@ -8,7 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 class LoginView(LoginRequiredMixin):
     # template_name = "login.html"
     def login(request):
-        return render(request, 'login.html')
+        return render(request, 'signup/login.html')
 
 
 class HomeView(LoginRequiredMixin):
@@ -16,4 +16,4 @@ class HomeView(LoginRequiredMixin):
 
     @login_required
     def home(request):
-        return render(request, 'home.html')
+        return render(request, 'signup/home.html')
