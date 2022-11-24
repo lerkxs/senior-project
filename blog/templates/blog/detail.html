@@ -1,0 +1,47 @@
+{% extends 'blog/base.html' %}
+
+{% load blog_extras %}
+
+{% block content %} 
+    <div class="box">
+        <div class="hero is-primary is-medium">
+            <div class="hero-body">
+                <p class="title">{{ post.title }}</p>
+                <p class="subtitle">{{ post.created_at|date:"Y-m-d H:i" }}</p>
+            </div>
+        </div>
+
+        <div class="content intro">
+            <p>{{ post.intro }}</p>
+        </div>
+
+        <div class="content">
+            {{ post.body|convert_markdown|safe}}
+
+            <hr>
+
+            <h2 class="subtitle is-4">Comments</h2>
+            
+            <form method="post" class="mb-6">
+                {% csrf_token %}
+
+                {{ form.as_p }}
+
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-success">Submit comment</button>
+                    </div>
+                </div>
+            </form>
+
+            {% for comment in post.comments.all %}
+                <article class="media box">
+                    <div class="media-content">
+                        <strong>{{ comment.name }}</strong><small>{{ comment.created_at|timesince }} ago</small><br>
+                        {{ comment.body }}
+                    </div>
+                </article>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
